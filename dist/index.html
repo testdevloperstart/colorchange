@@ -6,7 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-900">
-    <h1 class="text-white">test</h1>
+<body class="bg-slate-900 text-white grid place-content-center h-screen">
+    <h1 class="text-white grid place-content-center font-serif text-lg">Color schema swiching</h1>
+    <div class="main flex justify-center align-middle " id="maindiv">
+        
+        <div class="boxs bg-red-600 w-32 h-32 m-2" id="red"></div>
+        <div class="boxs bg-green-600 w-32 h-32 m-2" id="green"></div>
+        <div class="boxs bg-yellow-600 w-32 h-32 m-2" id="yellow"></div>
+        <div class="boxs bg-orange-600 w-32 h-32 m-2" id="orange"></div>
+    </div>
 </body>
+<script>
+    let button = document.querySelectorAll('.boxs');
+    let body = document.querySelector('body')
+    console.log(button)
+    button.forEach( (button)=>{
+        console.log(button)
+        button.addEventListener('click', function(e){
+            console.log(e)
+            console.log(e.target)
+            if(e.target.id ==='red'){
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id ==='green'){
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id ==='yellow'){
+                body.style.backgroundColor = e.target.id
+            }
+            if(e.target.id ==='orange'){
+                body.style.backgroundColor = e.target.id
+            }
+        })
+    })
+</script>
 </html>
